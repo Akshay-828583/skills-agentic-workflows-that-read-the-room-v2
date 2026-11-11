@@ -73,6 +73,7 @@ When you interact with this agent, it will:
 2. **Route to the right prompt** - Load the specialized prompt file for your task
 3. **Execute the task** - Follow the detailed instructions in the loaded prompt
 
+
 ## Available Prompts
 
 > **Note**: The prompt and reference files below are from [`github/gh-aw`](https://github.com/github/gh-aw). Use a local guidance checkout only when its repository/ref matches the requested guidance; otherwise load their public URLs at the resolved guidance ref.
@@ -272,3 +273,4 @@ gh aw compile --validate
 - **Single-file output**: When creating a workflow, produce exactly **one** workflow `.md` file. Do not create separate documentation files (architecture docs, runbooks, usage guides, etc.). If documentation is needed, add a brief `## Usage` section inside the workflow file itself.
 - **Triggering runs**: Only where permitted and human-validated under `debug-agentic-workflow.md`, prefer `gh aw run <workflow-name>` over `gh workflow run <file>.lock.yml` for workflow resolution, input validation and run-tracking. Use the reviewed remote ref; explicit no-dispatch rules override user requests.
 - **CLI commands reference**: For a complete guide on all `gh aw` commands and their MCP tool equivalents (for restricted environments), see `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/cli-commands.md`
+- When creating or editing agentic workflow files, do not compile them. Only create or update the markdown workflow file.
